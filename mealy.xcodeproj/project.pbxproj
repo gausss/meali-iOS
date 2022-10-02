@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A567B6C28E89B8D00DB6A6F /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B6B28E89B8D00DB6A6F /* Meal.swift */; };
+		5A567B7828E8BCD200DB6A6F /* meals.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A567B7728E8BCD200DB6A6F /* meals.json */; };
+		5A567B7C28E8BEE400DB6A6F /* DataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B7B28E8BEE400DB6A6F /* DataAdapter.swift */; };
+		5A567B8028E8C58100DB6A6F /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B7F28E8C58100DB6A6F /* MealView.swift */; };
+		5A567B8228E8C83600DB6A6F /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B8128E8C83600DB6A6F /* MealDetail.swift */; };
+		5A567B8428E9A40900DB6A6F /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B8328E9A40900DB6A6F /* PlanView.swift */; };
 		5A9F76FF28E89513006B6679 /* mealyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F76FE28E89513006B6679 /* mealyApp.swift */; };
 		5A9F770128E89513006B6679 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F770028E89513006B6679 /* ContentView.swift */; };
 		5A9F770328E89514006B6679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F770228E89514006B6679 /* Assets.xcassets */; };
@@ -14,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A567B6B28E89B8D00DB6A6F /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		5A567B7728E8BCD200DB6A6F /* meals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = meals.json; sourceTree = "<group>"; };
+		5A567B7B28E8BEE400DB6A6F /* DataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAdapter.swift; sourceTree = "<group>"; };
+		5A567B7F28E8C58100DB6A6F /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
+		5A567B8128E8C83600DB6A6F /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
+		5A567B8328E9A40900DB6A6F /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
 		5A9F76FB28E89513006B6679 /* mealy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9F76FE28E89513006B6679 /* mealyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealyApp.swift; sourceTree = "<group>"; };
 		5A9F770028E89513006B6679 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +44,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A567B6828E8998200DB6A6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A9F770028E89513006B6679 /* ContentView.swift */,
+				5A567B7F28E8C58100DB6A6F /* MealView.swift */,
+				5A567B8128E8C83600DB6A6F /* MealDetail.swift */,
+				5A567B8328E9A40900DB6A6F /* PlanView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A567B6928E8998C00DB6A6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A567B6B28E89B8D00DB6A6F /* Meal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5A567B6A28E8999500DB6A6F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5A567B7728E8BCD200DB6A6F /* meals.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5A567B7A28E8BED400DB6A6F /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				5A567B7B28E8BEE400DB6A6F /* DataAdapter.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
 		5A9F76F228E89513006B6679 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +98,11 @@
 		5A9F76FD28E89513006B6679 /* mealy */ = {
 			isa = PBXGroup;
 			children = (
+				5A567B7A28E8BED400DB6A6F /* Adapters */,
+				5A567B6A28E8999500DB6A6F /* Resources */,
+				5A567B6928E8998C00DB6A6F /* Models */,
+				5A567B6828E8998200DB6A6F /* Views */,
 				5A9F76FE28E89513006B6679 /* mealyApp.swift */,
-				5A9F770028E89513006B6679 /* ContentView.swift */,
 				5A9F770228E89514006B6679 /* Assets.xcassets */,
 				5A9F770428E89514006B6679 /* Preview Content */,
 			);
@@ -125,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A567B7828E8BCD200DB6A6F /* meals.json in Resources */,
 				5A9F770628E89514006B6679 /* Preview Assets.xcassets in Resources */,
 				5A9F770328E89514006B6679 /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +189,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A9F770128E89513006B6679 /* ContentView.swift in Sources */,
+				5A567B6C28E89B8D00DB6A6F /* Meal.swift in Sources */,
+				5A567B8028E8C58100DB6A6F /* MealView.swift in Sources */,
+				5A567B8228E8C83600DB6A6F /* MealDetail.swift in Sources */,
 				5A9F76FF28E89513006B6679 /* mealyApp.swift in Sources */,
+				5A567B8428E9A40900DB6A6F /* PlanView.swift in Sources */,
+				5A567B7C28E8BEE400DB6A6F /* DataAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,13 +323,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mealy/Preview Content\"";
+				DEVELOPMENT_TEAM = V5CJ3339YJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Mealy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -281,9 +341,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.gaussian.mealy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -295,13 +358,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mealy/Preview Content\"";
+				DEVELOPMENT_TEAM = V5CJ3339YJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Mealy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,9 +376,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.gaussian.mealy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
