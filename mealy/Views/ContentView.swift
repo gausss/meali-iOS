@@ -1,18 +1,26 @@
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
+    @ObservedResults(MealLog.self) var mealLogs
+
     var body: some View {
-        TabView {
-            
-            PlanView()
-                .tabItem {
-                    Label("Planen", systemImage:"list.bullet.clipboard")
-                }
-            
-            MealView()
-                .tabItem {
-                    Label("Gerichte", systemImage: "frying.pan")
-                }
+        if let mealLog = mealLogs.first {
+            TabView {
+                PlanView(mealLog: mealLog)
+                                .tabItem {
+                                    Label("Planen", systemImage:"list.bullet.clipboard")
+                                }
+                
+                MealView(mealLog: mealLog)
+                    .tabItem {
+                        Label("Gerichte", systemImage: "frying.pan")
+                    }
+            }
+        } else {
+            ProgressView().onAppear {
+                $mealLogs.append(MealLog.mealLog1)
+            }
         }
     }
 }

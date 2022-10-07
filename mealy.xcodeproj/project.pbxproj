@@ -8,29 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		5A567B6C28E89B8D00DB6A6F /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B6B28E89B8D00DB6A6F /* Meal.swift */; };
-		5A567B7828E8BCD200DB6A6F /* meals.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A567B7728E8BCD200DB6A6F /* meals.json */; };
-		5A567B7C28E8BEE400DB6A6F /* DataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B7B28E8BEE400DB6A6F /* DataAdapter.swift */; };
 		5A567B8028E8C58100DB6A6F /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B7F28E8C58100DB6A6F /* MealView.swift */; };
 		5A567B8228E8C83600DB6A6F /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B8128E8C83600DB6A6F /* MealDetail.swift */; };
-		5A567B8428E9A40900DB6A6F /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B8328E9A40900DB6A6F /* PlanView.swift */; };
 		5A9F76FF28E89513006B6679 /* mealyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F76FE28E89513006B6679 /* mealyApp.swift */; };
 		5A9F770128E89513006B6679 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F770028E89513006B6679 /* ContentView.swift */; };
 		5A9F770328E89514006B6679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F770228E89514006B6679 /* Assets.xcassets */; };
 		5A9F770628E89514006B6679 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F770528E89514006B6679 /* Preview Assets.xcassets */; };
+		5AE1A6B628EF488B0057E4B0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5AE1A6B528EF488B0057E4B0 /* Realm */; };
+		5AE1A6B828EF488B0057E4B0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5AE1A6B728EF488B0057E4B0 /* RealmSwift */; };
+		5AE1A6BA28EF92E00057E4B0 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1A6B928EF92E00057E4B0 /* PlanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5A567B6B28E89B8D00DB6A6F /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		5A567B7728E8BCD200DB6A6F /* meals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = meals.json; sourceTree = "<group>"; };
-		5A567B7B28E8BEE400DB6A6F /* DataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAdapter.swift; sourceTree = "<group>"; };
 		5A567B7F28E8C58100DB6A6F /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 		5A567B8128E8C83600DB6A6F /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
-		5A567B8328E9A40900DB6A6F /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
 		5A9F76FB28E89513006B6679 /* mealy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9F76FE28E89513006B6679 /* mealyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealyApp.swift; sourceTree = "<group>"; };
 		5A9F770028E89513006B6679 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5A9F770228E89514006B6679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A9F770528E89514006B6679 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5AE1A6B928EF92E00057E4B0 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE1A6B828EF488B0057E4B0 /* RealmSwift in Frameworks */,
+				5AE1A6B628EF488B0057E4B0 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +50,7 @@
 				5A9F770028E89513006B6679 /* ContentView.swift */,
 				5A567B7F28E8C58100DB6A6F /* MealView.swift */,
 				5A567B8128E8C83600DB6A6F /* MealDetail.swift */,
-				5A567B8328E9A40900DB6A6F /* PlanView.swift */,
+				5AE1A6B928EF92E00057E4B0 /* PlanView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -61,22 +61,6 @@
 				5A567B6B28E89B8D00DB6A6F /* Meal.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		5A567B6A28E8999500DB6A6F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5A567B7728E8BCD200DB6A6F /* meals.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		5A567B7A28E8BED400DB6A6F /* Adapters */ = {
-			isa = PBXGroup;
-			children = (
-				5A567B7B28E8BEE400DB6A6F /* DataAdapter.swift */,
-			);
-			path = Adapters;
 			sourceTree = "<group>";
 		};
 		5A9F76F228E89513006B6679 = {
@@ -98,8 +82,6 @@
 		5A9F76FD28E89513006B6679 /* mealy */ = {
 			isa = PBXGroup;
 			children = (
-				5A567B7A28E8BED400DB6A6F /* Adapters */,
-				5A567B6A28E8999500DB6A6F /* Resources */,
 				5A567B6928E8998C00DB6A6F /* Models */,
 				5A567B6828E8998200DB6A6F /* Views */,
 				5A9F76FE28E89513006B6679 /* mealyApp.swift */,
@@ -133,6 +115,10 @@
 			dependencies = (
 			);
 			name = mealy;
+			packageProductDependencies = (
+				5AE1A6B528EF488B0057E4B0 /* Realm */,
+				5AE1A6B728EF488B0057E4B0 /* RealmSwift */,
+			);
 			productName = mealy;
 			productReference = 5A9F76FB28E89513006B6679 /* mealy.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +147,9 @@
 				Base,
 			);
 			mainGroup = 5A9F76F228E89513006B6679;
+			packageReferences = (
+				5AE1A6B428EF488B0057E4B0 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 5A9F76FC28E89513006B6679 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -175,7 +164,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A567B7828E8BCD200DB6A6F /* meals.json in Resources */,
 				5A9F770628E89514006B6679 /* Preview Assets.xcassets in Resources */,
 				5A9F770328E89514006B6679 /* Assets.xcassets in Resources */,
 			);
@@ -193,8 +181,7 @@
 				5A567B8028E8C58100DB6A6F /* MealView.swift in Sources */,
 				5A567B8228E8C83600DB6A6F /* MealDetail.swift in Sources */,
 				5A9F76FF28E89513006B6679 /* mealyApp.swift in Sources */,
-				5A567B8428E9A40900DB6A6F /* PlanView.swift in Sources */,
-				5A567B7C28E8BEE400DB6A6F /* DataAdapter.swift in Sources */,
+				5AE1A6BA28EF92E00057E4B0 /* PlanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +330,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -378,7 +365,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -407,6 +394,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5AE1A6B428EF488B0057E4B0 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.31.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5AE1A6B528EF488B0057E4B0 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AE1A6B428EF488B0057E4B0 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		5AE1A6B728EF488B0057E4B0 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AE1A6B428EF488B0057E4B0 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A9F76F328E89513006B6679 /* Project object */;
 }
