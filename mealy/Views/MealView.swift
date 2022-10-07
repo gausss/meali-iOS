@@ -1,38 +1,50 @@
 import SwiftUI
-import RealmSwift
 
 struct MealView: View {
-    @ObservedRealmObject var mealLog: MealLog
-    @State private var isShowingDetailView = false
-    @State private var lastAdded : Meal = Meal()
+    @State private var editMode = EditMode.inactive
+    @State var isArticleDetailsViewPresented: Bool = false
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(mealLog.meals) { meal in
+                ForEach(meals) { meal in
                     NavigationLink {
                         MealDetail(meal: meal)
                     } label: {
                         Text(meal.name)
                     }
-                }.onDelete(perform: $mealLog.meals.remove)
-                    .onMove(perform: $mealLog.meals.move)
+                }.onDelete(perform: onDelete)
             }
-            .navigationBarItems(leading: EditButton(), trailing: NavigationLink(destination: MealDetail(meal: lastAdded), isActive: $isShowingDetailView) {
-                Button(action: {
-                lastAdded = Meal()
-                $mealLog.meals.append(lastAdded)
-                isShowingDetailView.toggle()
-            }) { Image(systemName: "plus") }
-                
-            })
+            .navigationBarItems(leading: EditButton(), trailing: addButton)
             .navigationTitle("Gerichte")
+            .environment(\.editMode, $editMode)
         }
+    }
+    
+    private var addButton: some View {
+        switch editMode {
+        case .inactive:
+            return AnyView(Button(action: onAdd) { Image(systemName: "plus") })
+        default:
+            return AnyView(EmptyView())
+        }
+    }
+    
+    func onAdd() {
+        // To be implemented in the next section
+    }
+    
+    func onDelete(offsets: IndexSet) {
+        meals.remove(atOffsets: offsets)
+    }
+    
+    func onMove(source: IndexSet, destination: Int) {
+        meals.move(fromOffsets: source, toOffset: destination)
     }
 }
 
 struct MealView_Previews: PreviewProvider {
     static var previews: some View {
-        MealView(mealLog: MealLog.mealLog1).preferredColorScheme(.dark)
+        MealView().preferredColorScheme(.dark)
     }
 }

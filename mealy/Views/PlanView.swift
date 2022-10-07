@@ -1,18 +1,23 @@
 import SwiftUI
-import RealmSwift
 
 struct PlanView: View {
-    @ObservedRealmObject var mealLog: MealLog
-
     var body: some View {
         NavigationView {
             List {
-                ForEach(mealLog.meals) { meal in
+                ForEach(meals) { meal in
                     VStack(alignment: .leading) {
                         HStack {
+                            Text(meal.id.formatted())
+                                .frame(width: 15, height: 15, alignment: .center)
+                                .padding()
+                                .overlay(
+                                    Circle()
+                                        .stroke(Color.accentColor, lineWidth: 4)
+                                    .padding(6)
+                                )
                             Text(meal.name).font(.title)
                         }
-                        Text(meal.ingredients)
+                        Text(meal.ingredients.joined(separator: ","))
                     }
                 }
             }.navigationTitle("Dein Plan").listStyle(.inset)
@@ -23,6 +28,7 @@ struct PlanView: View {
 
 struct PlanView_Previews: PreviewProvider {
     static var previews: some View {
-        PlanView(mealLog: MealLog.mealLog1).preferredColorScheme(.dark)
+        PlanView().preferredColorScheme(.dark)
     }
 }
+

@@ -1,42 +1,30 @@
 import SwiftUI
-import RealmSwift
 
 struct MealDetail: View {
-    @ObservedRealmObject var meal: Meal
+    var meal: Meal
     
     var body: some View {
         VStack(alignment: .leading) {
-            VStack(alignment: .leading) {
-                Text("Name")
-                    .font(.title2)
-                Divider()
-                TextField("", text: $meal.name)
-                    .frame(height: 50)
-            }
+            Text(meal.name)
+                .font(.title).bold().padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
             
-            VStack(alignment: .leading) {
-                Text("Zutaten")
-                    .font(.title2)
-                Divider()
-                TextEditor(text: $meal.ingredients).frame(height: 100)
-            }
+            Text("Zutaten")
+                .font(.title2)
+            Divider()
+            Text(meal.ingredients.joined(separator: ", ")).padding(EdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 0))
             
-            VStack(alignment: .leading) {
-                Text("Rezept")
-                    .font(.title2)
-                Divider()
-                TextEditor(text: $meal.recipe)
-            }
+            Text("Rezept")
+                .font(.title2)
+            Divider()
+            Text(meal.description)
             
             Spacer()
-        }.padding().navigationTitle(!meal.name.isEmpty ? "Bearbeiten" : "Erstellen")
-
-
+        }.padding()
     }
 }
 
 struct MealDetail_Previews: PreviewProvider {
     static var previews: some View {
-        MealDetail(meal: Meal.meal1).preferredColorScheme(.dark)
+        MealDetail(meal: meals[0]).preferredColorScheme(.dark)
     }
 }
