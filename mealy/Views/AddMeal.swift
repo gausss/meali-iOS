@@ -23,13 +23,9 @@ struct AddMeal: View {
       }
       .navigationBarTitle(Text("Gericht hinzufügen"), displayMode: .inline)
       .navigationBarItems(
-        leading:
-            Button(action: close) {
-            Text("Abbrechen")
-          },
         trailing:
           Button(action: addMeal) {
-            Text("Hinzufügen")
+              Image(systemName: "checkmark.circle")
           }
       )
     }
@@ -40,7 +36,6 @@ struct AddMeal: View {
             name: name,
             ingredients: ingredients.split(separator: ",").map { String($0) },
             description: description)
-        
         close()
     }
     
