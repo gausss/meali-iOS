@@ -9,7 +9,7 @@ struct PlanRow: View {
             Text("\(day)").font(.largeTitle).foregroundColor(Color.gray).bold().padding(12)
             
             VStack(alignment: .leading) {
-                Text(meal.name).font(.title2).bold()
+                Text(meal.id).font(.title2).bold()
                 
                 Text(meal.ingredients.joined(separator: ","))
             }

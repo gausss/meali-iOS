@@ -8,7 +8,7 @@ struct ContentView: View {
         TabView {
             PlanView(mealService: mealService, planService: planService)
                 .tabItem {
-                                Label("Planen", systemImage:"list.bullet.clipboard")
+                                Label("Planen", systemImage:"calendar")
                             }
             MealList(mealService: mealService)
                     .tabItem {

@@ -18,12 +18,12 @@ struct PlanView: View {
                 
                 List {
                     ForEach(planService.plan, id: \.day) { plan in
-                        PlanRow(day: plan.day, meal: mealService.getByName(name: plan.mealName))
+                        PlanRow(day: plan.day, meal: mealService.getByName(name: plan.mealID))
                     }
                 }.listStyle(.plain)
                 
                 Button(action: generate) {
-                    Label("Plan erstellen", systemImage: "list.bullet.rectangle")
+                    Label("Plan erstellen", systemImage: "goforward")
                 }.tint(.accentColor).buttonStyle(.borderedProminent).controlSize(.large).buttonBorderShape(.capsule).padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
             }.navigationTitle("Dein Plan")
         }

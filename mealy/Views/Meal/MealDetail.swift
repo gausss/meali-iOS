@@ -17,6 +17,6 @@ struct MealDetail: View {
             
             Spacer()
         }.padding()
-            .navigationTitle(meal.name)
+            .navigationTitle(meal.id)
     }
 }

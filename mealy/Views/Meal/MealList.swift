@@ -16,14 +16,14 @@ struct MealList: View {
                 }
                 
                 List {
-                    ForEach(mealService.meals, id: \.name) { meal in
+                    ForEach(mealService.meals, id: \.id) { meal in
                         NavigationLink {
                             MealDetail(meal: meal)
                         } label: {
-                            Text(meal.name)
+                            Text(meal.id)
                         }
                     }.onDelete(perform: mealService.delete)
-                }
+                }.listStyle(.plain)
                 .sheet(isPresented: $isPresented) {
                     AddMeal(mealService: mealService, showModal: $isPresented)
                 }

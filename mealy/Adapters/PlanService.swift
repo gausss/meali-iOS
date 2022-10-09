@@ -24,8 +24,15 @@ class PlanService: ObservableObject {
             return
         }
         
-        for day in 1...days {
-            plan.append(PlanItem(mealName: meals.randomElement()?.name ?? "Nicht gefunden", day: day))
+        var newPlan: Set<Meal> = Set()
+        while newPlan.count < min(days, meals.count) {
+            if let plannedMeal = meals.randomElement() {
+                newPlan.insert(plannedMeal)
+            }
+        }
+        
+        newPlan.enumerated().forEach { (day, meal) in
+            plan.append(PlanItem(mealID: meal.id, day: day + 1))
         }
     }
     

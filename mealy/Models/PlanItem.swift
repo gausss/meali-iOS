@@ -1,6 +1,6 @@
 import Foundation
 
 struct PlanItem: Codable {
-    let mealName: String
+    let mealID: String
     let day: Int
 }
