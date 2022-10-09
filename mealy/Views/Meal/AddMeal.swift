@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AddMeal: View {
 
-  let mealStore: MealStore
+  let mealService: MealService
   @Binding var showModal: Bool
   @State private var name = ""
   @State private var ingredients = ""
@@ -32,7 +32,7 @@ struct AddMeal: View {
   }
 
     private func addMeal() {
-        mealStore.addMeal(
+        mealService.addMeal(
             name: name,
             ingredients: ingredients.split(separator: ",").map { String($0) },
             description: description)

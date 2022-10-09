@@ -1,13 +1,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var mealService = MealService()
+    @StateObject var planService = PlanService()
+
     var body: some View {
         TabView {
-            PlanView()
+            PlanView(mealService: mealService, planService: planService)
                 .tabItem {
                                 Label("Planen", systemImage:"list.bullet.clipboard")
                             }
-            MealList()
+            MealList(mealService: mealService)
                     .tabItem {
                         Label("Gerichte", systemImage: "frying.pan")
                     }
