@@ -2,6 +2,6 @@ import Foundation
 
 struct Meal: Codable, Identifiable, Hashable {
     let id: String
-    let ingredients: [String]
+    let ingredients: [Ingredient]
     let description: String
 }

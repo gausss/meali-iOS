@@ -18,7 +18,7 @@ struct PlanView: View {
                 
                 List {
                     ForEach(planService.plan, id: \.day) { plan in
-                        PlanRow(day: plan.day, meal: mealService.getByName(name: plan.mealID))
+                        PlanRow(day: plan.day, meal: mealService.getByName(name: plan.mealID) ?? Meal(id: "Nicht gefunden", ingredients: [], description: ""))
                     }
                 }.listStyle(.plain)
                 

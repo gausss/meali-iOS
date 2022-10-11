@@ -8,8 +8,8 @@ struct ContentView: View {
         TabView {
             PlanView(mealService: mealService, planService: planService)
                 .tabItem {
-                                Label("Planen", systemImage:"calendar")
-                            }
+                    Label("Planen", systemImage:"calendar")
+                }
             MealList(mealService: mealService)
                     .tabItem {
                         Label("Gerichte", systemImage: "frying.pan")

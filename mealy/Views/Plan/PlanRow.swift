@@ -11,7 +11,7 @@ struct PlanRow: View {
             VStack(alignment: .leading) {
                 Text(meal.id).font(.title2).bold()
                 
-                Text(meal.ingredients.joined(separator: ","))
+                Text(meal.ingredients.map({$0.print()}).joined(separator: ", "))
             }
         }
     }

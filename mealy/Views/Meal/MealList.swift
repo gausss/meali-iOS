@@ -18,22 +18,20 @@ struct MealList: View {
                 List {
                     ForEach(mealService.meals, id: \.id) { meal in
                         NavigationLink {
-                            MealDetail(meal: meal)
+                            MealDetail(mealService: mealService, meal: meal)
                         } label: {
                             Text(meal.id)
                         }
                     }.onDelete(perform: mealService.delete)
                 }.listStyle(.plain)
-                .sheet(isPresented: $isPresented) {
-                    AddMeal(mealService: mealService, showModal: $isPresented)
-                }
+                
+                NavigationLink(destination: MealDetail(mealService: mealService), isActive: $isPresented) { EmptyView() }
                 
                 Button(action: {isPresented.toggle()}) {
                     Label("Gericht hinzufügen", systemImage: "plus")
                 }.tint(.accentColor).buttonStyle(.borderedProminent).controlSize(.large).buttonBorderShape(.capsule).padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
             }
             .navigationTitle("Deine Gerichte")
-                
         }
     }
 }
