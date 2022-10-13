@@ -1,15 +1,16 @@
 import SwiftUI
 
-struct MealList: View {
+struct MealView: View {
     @ObservedObject var mealService : MealService
     @State private var isPresented = false
+    @State private var query = ""
 
     var body: some View {
         NavigationView {
             VStack {
                 if(mealService.meals.isEmpty) {
                     VStack(alignment: .leading) {
-                        Text("Selina, du hast noch kein Gericht hinterlegt. Solange gibt es Ravioli.").font(.title2)
+                        Text("Selina, du hast noch kein Gericht hinterlegt.").font(.title2)
                         
                         Image("Ravioli").resizable().scaledToFill().padding(60)
                     }.padding(15)
@@ -26,18 +27,17 @@ struct MealList: View {
                 }.listStyle(.plain)
                 
                 NavigationLink(destination: MealDetail(mealService: mealService), isActive: $isPresented) { EmptyView() }
-                
                 Button(action: {isPresented.toggle()}) {
                     Label("Gericht hinzufügen", systemImage: "plus")
-                }.tint(.accentColor).buttonStyle(.borderedProminent).controlSize(.large).buttonBorderShape(.capsule).padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
+                }.tint(.accentColor).buttonStyle(.borderedProminent).controlSize(.large).buttonBorderShape(.capsule).padding(EdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0))
             }
-            .navigationTitle("Deine Gerichte")
+            .navigationTitle("Gerichte")
         }
     }
 }
 
 struct MealView_Previews: PreviewProvider {
     static var previews: some View {
-        MealList(mealService: MealService()).preferredColorScheme(.dark)
+        MealView(mealService: MealService()).preferredColorScheme(.dark)
     }
 }

@@ -10,9 +10,13 @@ struct ContentView: View {
                 .tabItem {
                     Label("Planen", systemImage:"calendar")
                 }
-            MealList(mealService: mealService)
+            MealView(mealService: mealService)
                     .tabItem {
                         Label("Gerichte", systemImage: "frying.pan")
+                    }
+            BuyView(mealService: mealService, planService: planService)
+                    .tabItem {
+                        Label("Einkaufen", systemImage: "cart")
                     }
         }
     }

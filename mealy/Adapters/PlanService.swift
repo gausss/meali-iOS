@@ -46,5 +46,25 @@ class PlanService: ObservableObject {
             UserDefaults.standard.set(encoded, forKey: PlanService.planServiceKey)
         }
     }
+    
+    func getIngredientList(plan: [PlanItem], meals: [Meal]) -> [String]{
+       let planIgredients = plan
+           .map {$0.mealID}
+           .map { name in meals.first(where: { $0.id == name})}
+           .map {$0 ?? Meal.notFoundMeal}
+           .map {$0.ingredients}
+           .flatMap {$0}
+       
+        let ingredientMap = Dictionary(grouping: planIgredients, by: { $0.name })
+        return ingredientMap.keys
+            .map{ingredientMap[$0]}
+            .compactMap{$0}
+            .map{Ingredient(amount: sumIngredient(ingredients: $0) , unit: $0[0].unit, name: $0[0].name)}
+            .map{$0.print()}
+   }
+
+   private func sumIngredient(ingredients: [Ingredient]) -> String {
+       return  String(ingredients.map{Int($0.amount) ?? 0}.reduce(0, +))
+   }
 }
 

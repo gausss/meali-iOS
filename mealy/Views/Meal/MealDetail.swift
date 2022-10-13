@@ -11,29 +11,28 @@ struct MealDetail: View {
     @State private var ingredientUnit: UnitType = .x
     @State private var ingredientName : String = ""
 
-    let heading: String
+    let creation: Bool
     
     init(mealService: MealService, meal: Meal) {
         self.mealService = mealService
         self.name = meal.id
         self.ingredients = meal.ingredients
         self.description = meal.description
-        self.heading = "Bearbeiten"
+        self.creation = false
     }
     
     init(mealService: MealService) {
         self.mealService = mealService
-        self.heading = "Erstellen"
+        self.creation = true
     }
     
     var body: some View {
         VStack(alignment: .leading) {
             Form {
-                Section(header: Text("Name")) {
-                    TextField("", text: $name)
-                }
-                Section(header: Text("Rezept")) {
-                    TextEditor(text: $description)
+                if (creation) {
+                    Section(header: Text("Name")) {
+                        TextField("", text: $name)
+                    }
                 }
                 Section(header: Text("Zutaten")) {
                     List {
@@ -41,36 +40,36 @@ struct MealDetail: View {
                             Text(ingredient.print())
                         }.onDelete(perform: removeIngredient)
                         
-                        VStack {
-                            HStack {
-                                TextField("Menge", text: $ingredientAmount)
-                                    .keyboardType(.numberPad)
-                                    .onReceive(Just(ingredientAmount)) { newValue in
-                                        let filtered = newValue.filter { "0123456789".contains($0) }
-                                        if filtered != newValue {
-                                            self.ingredientAmount = filtered
-                                        }
-                                    }
-                                
-                                TextField("Zutat", text: $ingredientName)
-                                
-                                Spacer()
-                            }.padding(8)
+                        HStack {
+                            Button(action: addIngredient) {
+                                Image(systemName: "plus.circle").padding(EdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 16))
+                            }.disabled(ingredientAmount.isEmpty || ingredientName.isEmpty || ingredients.contains(where: {$0.name == ingredientName}))
                             
-                            Picker("Unit", selection: $ingredientUnit) {
-                                Text("Gramm").tag(UnitType.g)
-                                Text("Milliliter").tag(UnitType.ml)
-                                Text("Stück").tag(UnitType.x)
-                            }.pickerStyle(.segmented)
+                            VStack {
+                                HStack {
+                                    TextField("Menge", text: $ingredientAmount)
+                                        .keyboardType(.numberPad)
+                                    
+                                    TextField("Zutat", text: $ingredientName)
+                                    
+                                    Spacer()
+                                }.padding(8)
+                                
+                                Picker("Unit", selection: $ingredientUnit) {
+                                    Text("Gramm").tag(UnitType.g)
+                                    Text("Milliliter").tag(UnitType.ml)
+                                    Text("Stück").tag(UnitType.x)
+                                }.pickerStyle(.segmented)
+                            }
                         }
-                        
-                        Button(action: addIngredient) {
-                            Image(systemName: "plus")
-                        }.disabled(ingredientAmount.isEmpty || ingredientName.isEmpty)
                     }
                 }
+                
+                Section(header: Text("Rezept")) {
+                    TextEditor(text: $description).frame(minHeight: 120)
+                }
             }
-        }.navigationTitle(heading)
+        }.navigationTitle(creation ? "Erstellen" : self.name)
             .onDisappear(perform: {mealService.addMeal(name: name, ingredients: ingredients, description: description)})
     }
     
