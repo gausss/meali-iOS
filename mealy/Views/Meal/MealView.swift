@@ -3,7 +3,6 @@ import SwiftUI
 struct MealView: View {
     @ObservedObject var mealService : MealService
     @State private var isPresented = false
-    @State private var query = ""
 
     var body: some View {
         NavigationView {
@@ -28,10 +27,11 @@ struct MealView: View {
                 
                 NavigationLink(destination: MealDetail(mealService: mealService), isActive: $isPresented) { EmptyView() }
                 Button(action: {isPresented.toggle()}) {
-                    Label("Gericht hinzufügen", systemImage: "plus")
-                }.tint(.accentColor).buttonStyle(.borderedProminent).controlSize(.large).buttonBorderShape(.capsule).padding(EdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0))
+                    Label("Hinzufügen", systemImage: "plus")
+                }.tint(.accentColor).buttonStyle(.borderedProminent).controlSize(.large).buttonBorderShape(.capsule)
             }
             .navigationTitle("Gerichte")
+            .padding(EdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0))
         }
     }
 }

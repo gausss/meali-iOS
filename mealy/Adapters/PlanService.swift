@@ -47,7 +47,7 @@ class PlanService: ObservableObject {
         }
     }
     
-    func getIngredientList(plan: [PlanItem], meals: [Meal]) -> [String]{
+    func getIngredients(plan: [PlanItem], meals: [Meal]) -> [String]{
        let planIgredients = plan
            .map {$0.mealID}
            .map { name in meals.first(where: { $0.id == name})}
@@ -60,6 +60,7 @@ class PlanService: ObservableObject {
             .map{ingredientMap[$0]}
             .compactMap{$0}
             .map{Ingredient(amount: sumIngredient(ingredients: $0) , unit: $0[0].unit, name: $0[0].name)}
+            .sorted {$0.name < $1.name}
             .map{$0.print()}
    }
 

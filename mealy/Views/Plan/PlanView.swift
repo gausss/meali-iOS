@@ -22,9 +22,10 @@ struct PlanView: View {
                 }.listStyle(.plain)
 
                 Button(action: generate) {
-                    Label("Plan erstellen", systemImage: "goforward")
-                }.tint(.accentColor).buttonStyle(.borderedProminent).controlSize(.large).buttonBorderShape(.capsule).padding(EdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0))
+                    Label("Neu erstellen", systemImage: "goforward")
+                }.tint(.accentColor).buttonStyle(.borderedProminent).controlSize(.large).buttonBorderShape(.capsule)
             }.navigationTitle("Dein Plan")
+            .padding(EdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0))
         }
     }
 

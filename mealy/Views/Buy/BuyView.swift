@@ -16,12 +16,20 @@ struct BuyView : View {
                 }
                 
                 List {
-                    ForEach(planService.getIngredientList(plan: planService.plan, meals: mealService.meals), id: \.self) { buyItem in
-                        Text(buyItem)
+                    ForEach(planService.getIngredients(plan: planService.plan, meals: mealService.meals), id: \.self) { buyItem in Text(buyItem)
                     }
                 }.listStyle(.plain)
+                
+                Button(action: copy) {
+                    Label("Kopieren", systemImage: "doc.on.doc")
+                }.tint(.accentColor).buttonStyle(.borderedProminent).controlSize(.large).buttonBorderShape(.capsule)
             }.navigationTitle("Einkaufsliste")
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
         }
+    }
+    
+    private func copy() {
+        UIPasteboard.general.string = planService.getIngredients(plan: planService.plan, meals: mealService.meals).joined(separator: "\n")
     }
 }
 
