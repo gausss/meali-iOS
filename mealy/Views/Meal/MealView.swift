@@ -9,8 +9,7 @@ struct MealView: View {
             VStack {
                 if(mealService.meals.isEmpty) {
                     VStack(alignment: .leading) {
-                        Text("Selina, du hast noch kein Gericht hinterlegt.").font(.title2)
-                        
+                        Text("Du hast noch keine Gerichte erstellt.").font(.title2)
                         Image("Ravioli").resizable().scaledToFill().padding(60)
                     }.padding(15)
                 }

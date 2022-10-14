@@ -9,27 +9,32 @@ struct BuyView : View {
             VStack {
                 if(planService.plan.isEmpty) {
                     VStack(alignment: .leading) {
-                        Text("Selina, es gibt nichts zu kaufen ohne Essensplan.").font(.title2)
-                        
+                        Text("Es gibt nichts zu kaufen.").font(.title2)
                         Image("Penne").resizable().scaledToFill().padding(60)
                     }.padding(15)
                 }
                 
                 List {
-                    ForEach(planService.getIngredients(plan: planService.plan, meals: mealService.meals), id: \.self) { buyItem in Text(buyItem)
+                    ForEach(getIngredient(), id: \.self) {
+                        buyItem in Text(buyItem)
                     }
                 }.listStyle(.plain)
                 
                 Button(action: copy) {
-                    Label("Kopieren", systemImage: "doc.on.doc")
-                }.tint(.accentColor).buttonStyle(.borderedProminent).controlSize(.large).buttonBorderShape(.capsule)
-            }.navigationTitle("Einkaufsliste")
+                    Label("Kopieren", systemImage: "clipboard")
+                }.tint(.accentColor).buttonStyle(.borderedProminent).controlSize(.large).buttonBorderShape(.capsule).disabled(planService.plan.isEmpty)
+            }
+            .navigationTitle("Einkaufsliste")
             .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
         }
     }
     
     private func copy() {
-        UIPasteboard.general.string = planService.getIngredients(plan: planService.plan, meals: mealService.meals).joined(separator: "\n")
+        UIPasteboard.general.string = getIngredient().joined(separator: "\n")
+    }
+    
+    private func getIngredient() -> [String] {
+        planService.getIngredients(plan: planService.plan, meals: mealService.meals)
     }
 }
 

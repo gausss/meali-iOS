@@ -19,8 +19,8 @@ class MealService: ObservableObject {
         }
     }
     
-    func getByName(name: String) -> Meal? {
-        meals.first(where: { $0.id == name})
+    func getByName(name: String) -> Meal {
+        meals.first(where: { $0.id == name}) ?? Meal.notFoundMeal
     }
 
     func addMeal(name: String, ingredients: [Ingredient], description: String) {

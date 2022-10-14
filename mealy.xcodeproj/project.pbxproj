@@ -59,7 +59,6 @@
 			children = (
 				5A567B7F28E8C58100DB6A6F /* MealView.swift */,
 				5A567B8128E8C83600DB6A6F /* MealDetail.swift */,
-				5A5616C428F5FA5400832CC1 /* UnitType.swift */,
 			);
 			path = Meal;
 			sourceTree = "<group>";
@@ -87,6 +86,7 @@
 		5A567B6928E8998C00DB6A6F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5A5616C428F5FA5400832CC1 /* UnitType.swift */,
 				5A567B6B28E89B8D00DB6A6F /* Meal.swift */,
 				5A1DC9C128F1DE4600E24B68 /* PlanItem.swift */,
 				5A5616C628F5FE1A00832CC1 /* Ingredient.swift */,
