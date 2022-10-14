@@ -3,19 +3,20 @@ import SwiftUI
 struct MealView: View {
     @ObservedObject var mealService : MealService
     @State private var isPresented = false
+    @State private var query = ""
 
     var body: some View {
         NavigationView {
             VStack {
-                if(mealService.meals.isEmpty) {
+                if(getMeals().isEmpty) {
                     VStack(alignment: .leading) {
-                        Text("Du hast noch keine Gerichte erstellt.").font(.title2)
+                        Text("Keine Gerichte gefunden.").font(.title2)
                         Image("Ravioli").resizable().scaledToFill().padding(60)
                     }.padding(15)
                 }
                 
                 List {
-                    ForEach(mealService.meals, id: \.id) { meal in
+                    ForEach(getMeals(), id: \.id) { meal in
                         NavigationLink {
                             MealEdit(mealService: mealService, meal: meal)
                         } label: {
@@ -23,6 +24,7 @@ struct MealView: View {
                         }
                     }.onDelete(perform: mealService.delete)
                 }.listStyle(.plain)
+                    .searchable(text: $query)
                 
                 NavigationLink(destination: MealEdit(mealService: mealService), isActive: $isPresented) { EmptyView() }
                 Button(action: {isPresented.toggle()}) {
@@ -32,5 +34,13 @@ struct MealView: View {
             .navigationTitle("Gerichte")
             .padding(EdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0))
         }
+    }
+    
+    func getMeals() -> [Meal] {
+        if(query.isEmpty) {
+            return mealService.meals
+        }
+        
+        return mealService.meals.filter{$0.id.contains(query)}
     }
 }
