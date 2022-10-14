@@ -17,14 +17,14 @@ struct MealView: View {
                 List {
                     ForEach(mealService.meals, id: \.id) { meal in
                         NavigationLink {
-                            MealDetail(mealService: mealService, meal: meal)
+                            MealEdit(mealService: mealService, meal: meal)
                         } label: {
                             Text(meal.id)
                         }
                     }.onDelete(perform: mealService.delete)
                 }.listStyle(.plain)
                 
-                NavigationLink(destination: MealDetail(mealService: mealService), isActive: $isPresented) { EmptyView() }
+                NavigationLink(destination: MealEdit(mealService: mealService), isActive: $isPresented) { EmptyView() }
                 Button(action: {isPresented.toggle()}) {
                     Label("Hinzufügen", systemImage: "plus")
                 }.tint(.accentColor).buttonStyle(.borderedProminent).controlSize(.large).buttonBorderShape(.capsule)
@@ -32,11 +32,5 @@ struct MealView: View {
             .navigationTitle("Gerichte")
             .padding(EdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0))
         }
-    }
-}
-
-struct MealView_Previews: PreviewProvider {
-    static var previews: some View {
-        MealView(mealService: MealService()).preferredColorScheme(.dark)
     }
 }

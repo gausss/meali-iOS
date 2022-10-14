@@ -37,9 +37,3 @@ struct BuyView : View {
         planService.getIngredients(plan: planService.plan, meals: mealService.meals)
     }
 }
-
-struct BuyView_Previews: PreviewProvider {
-    static var previews: some View {
-        BuyView(mealService: MealService(), planService: PlanService()).preferredColorScheme(.dark)
-    }
-}

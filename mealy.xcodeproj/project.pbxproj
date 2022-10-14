@@ -15,12 +15,14 @@
 		5A567B6C28E89B8D00DB6A6F /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B6B28E89B8D00DB6A6F /* Meal.swift */; };
 		5A567B7C28E8BEE400DB6A6F /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B7B28E8BEE400DB6A6F /* MealService.swift */; };
 		5A567B8028E8C58100DB6A6F /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B7F28E8C58100DB6A6F /* MealView.swift */; };
-		5A567B8228E8C83600DB6A6F /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B8128E8C83600DB6A6F /* MealDetail.swift */; };
+		5A567B8228E8C83600DB6A6F /* MealEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B8128E8C83600DB6A6F /* MealEdit.swift */; };
 		5A9F76FF28E89513006B6679 /* mealyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F76FE28E89513006B6679 /* mealyApp.swift */; };
 		5A9F770128E89513006B6679 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F770028E89513006B6679 /* ContentView.swift */; };
 		5A9F770328E89514006B6679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F770228E89514006B6679 /* Assets.xcassets */; };
 		5A9F770628E89514006B6679 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F770528E89514006B6679 /* Preview Assets.xcassets */; };
 		5ADF46E128F864BC00D045D5 /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF46E028F864BC00D045D5 /* BuyView.swift */; };
+		5AE30BCA28F9E588002BCAD1 /* IngredientEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE30BC928F9E588002BCAD1 /* IngredientEdit.swift */; };
+		5AE30BCC28F9EA8E002BCAD1 /* JsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE30BCB28F9EA8E002BCAD1 /* JsonStore.swift */; };
 		5AE4BA3728F0BBE0009DF670 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE4BA3628F0BBE0009DF670 /* PlanView.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,13 +35,15 @@
 		5A567B6B28E89B8D00DB6A6F /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		5A567B7B28E8BEE400DB6A6F /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
 		5A567B7F28E8C58100DB6A6F /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
-		5A567B8128E8C83600DB6A6F /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
+		5A567B8128E8C83600DB6A6F /* MealEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealEdit.swift; sourceTree = "<group>"; };
 		5A9F76FB28E89513006B6679 /* mealy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9F76FE28E89513006B6679 /* mealyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealyApp.swift; sourceTree = "<group>"; };
 		5A9F770028E89513006B6679 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5A9F770228E89514006B6679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A9F770528E89514006B6679 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5ADF46E028F864BC00D045D5 /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
+		5AE30BC928F9E588002BCAD1 /* IngredientEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientEdit.swift; sourceTree = "<group>"; };
+		5AE30BCB28F9EA8E002BCAD1 /* JsonStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStore.swift; sourceTree = "<group>"; };
 		5AE4BA3628F0BBE0009DF670 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				5A567B7F28E8C58100DB6A6F /* MealView.swift */,
-				5A567B8128E8C83600DB6A6F /* MealDetail.swift */,
+				5A567B8128E8C83600DB6A6F /* MealEdit.swift */,
+				5AE30BC928F9E588002BCAD1 /* IngredientEdit.swift */,
 			);
 			path = Meal;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			children = (
 				5A567B7B28E8BEE400DB6A6F /* MealService.swift */,
 				5A1DC9BF28F1DE3C00E24B68 /* PlanService.swift */,
+				5AE30BCB28F9EA8E002BCAD1 /* JsonStore.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -224,10 +230,12 @@
 				5A5616C728F5FE1A00832CC1 /* Ingredient.swift in Sources */,
 				5A1DC9C228F1DE4600E24B68 /* PlanItem.swift in Sources */,
 				5A1DC9C028F1DE3C00E24B68 /* PlanService.swift in Sources */,
-				5A567B8228E8C83600DB6A6F /* MealDetail.swift in Sources */,
+				5A567B8228E8C83600DB6A6F /* MealEdit.swift in Sources */,
 				5A9F76FF28E89513006B6679 /* mealyApp.swift in Sources */,
+				5AE30BCC28F9EA8E002BCAD1 /* JsonStore.swift in Sources */,
 				5ADF46E128F864BC00D045D5 /* BuyView.swift in Sources */,
 				5A1DC9BC28F1D30B00E24B68 /* PlanRow.swift in Sources */,
+				5AE30BCA28F9E588002BCAD1 /* IngredientEdit.swift in Sources */,
 				5A567B7C28E8BEE400DB6A6F /* MealService.swift in Sources */,
 				5A5616C528F5FA5400832CC1 /* UnitType.swift in Sources */,
 				5AE4BA3728F0BBE0009DF670 /* PlanView.swift in Sources */,

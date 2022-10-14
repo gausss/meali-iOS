@@ -1,21 +1,11 @@
 import Foundation
 
 class MealService: ObservableObject {
-    static let mealServiceKey = "meals"
-
-    private static func getAll() -> [Meal] {
-        let savedMeals = UserDefaults.standard.object(forKey: MealService.mealServiceKey)
-        if let savedMeals = savedMeals as? Data {
-            let decoder = JSONDecoder()
-            return (try? decoder.decode([Meal].self, from: savedMeals))
-                    ?? []
-        }
-        return []
-    }
+    static let key = "meals"
     
-    @Published var meals = getAll() {
+    @Published var meals = JsonStore.readMeals() {
         didSet {
-            persist()
+            JsonStore.persist(data: meals, key: MealService.key)
         }
     }
     
@@ -34,12 +24,5 @@ class MealService: ObservableObject {
 
     func delete(at offsets: IndexSet) {
         meals.remove(atOffsets: offsets)
-    }
-
-    private func persist() {
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(meals) {
-            UserDefaults.standard.set(encoded, forKey: MealService.mealServiceKey)
-        }
     }
 }

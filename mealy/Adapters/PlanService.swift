@@ -1,21 +1,11 @@
 import Foundation
 
 class PlanService: ObservableObject {
-    static let planServiceKey = "plans"
+    static let key = "plans"
     
-    private static func getAll() -> [PlanItem] {
-        let savedPlan = UserDefaults.standard.object(forKey: PlanService.planServiceKey)
-        if let savedPlan = savedPlan as? Data {
-            let decoder = JSONDecoder()
-            return (try? decoder.decode([PlanItem].self, from: savedPlan))
-                    ?? []
-        }
-        return []
-    }
-    
-    @Published var plan = getAll() {
+    @Published var plan = JsonStore.readPlan() {
         didSet {
-            persist()
+            JsonStore.persist(data: plan, key: PlanService.key)
         }
     }
 
@@ -40,13 +30,6 @@ class PlanService: ObservableObject {
         plan.removeAll()
     }
 
-    private func persist() {
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(plan) {
-            UserDefaults.standard.set(encoded, forKey: PlanService.planServiceKey)
-        }
-    }
-    
     func getIngredients(plan: [PlanItem], meals: [Meal]) -> [String]{
        let planIgredients = plan
            .map {$0.mealID}

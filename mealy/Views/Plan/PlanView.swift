@@ -34,10 +34,3 @@ struct PlanView: View {
         planService.regenerate(meals: mealService.meals, days: 4)
     }
 }
-
-
-struct PlanView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlanView(mealService: MealService(), planService: PlanService()).preferredColorScheme(.dark)
-    }
-}
