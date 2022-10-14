@@ -23,8 +23,25 @@
 		5ADF46E128F864BC00D045D5 /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF46E028F864BC00D045D5 /* BuyView.swift */; };
 		5AE30BCA28F9E588002BCAD1 /* IngredientEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE30BC928F9E588002BCAD1 /* IngredientEdit.swift */; };
 		5AE30BCC28F9EA8E002BCAD1 /* JsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE30BCB28F9EA8E002BCAD1 /* JsonStore.swift */; };
+		5AE30BFB28F9FDCE002BCAD1 /* PlanServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE30BFA28F9FDCE002BCAD1 /* PlanServiceTest.swift */; };
+		5AE30C0128F9FE70002BCAD1 /* PlanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1DC9BF28F1DE3C00E24B68 /* PlanService.swift */; };
+		5AE30C0228F9FE75002BCAD1 /* JsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE30BCB28F9EA8E002BCAD1 /* JsonStore.swift */; };
+		5AE30C0328F9FE93002BCAD1 /* PlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1DC9C128F1DE4600E24B68 /* PlanItem.swift */; };
+		5AE30C0428F9FE93002BCAD1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B6B28E89B8D00DB6A6F /* Meal.swift */; };
+		5AE30C0528F9FE93002BCAD1 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5616C628F5FE1A00832CC1 /* Ingredient.swift */; };
+		5AE30C0628F9FE93002BCAD1 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5616C428F5FA5400832CC1 /* UnitType.swift */; };
 		5AE4BA3728F0BBE0009DF670 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE4BA3628F0BBE0009DF670 /* PlanView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5AE30BFC28F9FDCE002BCAD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A9F76F328E89513006B6679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A9F76FA28E89513006B6679;
+			remoteInfo = mealy;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5A1DC9BB28F1D30B00E24B68 /* PlanRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRow.swift; sourceTree = "<group>"; };
@@ -44,11 +61,20 @@
 		5ADF46E028F864BC00D045D5 /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
 		5AE30BC928F9E588002BCAD1 /* IngredientEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientEdit.swift; sourceTree = "<group>"; };
 		5AE30BCB28F9EA8E002BCAD1 /* JsonStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStore.swift; sourceTree = "<group>"; };
+		5AE30BF828F9FDCE002BCAD1 /* mealyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mealyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE30BFA28F9FDCE002BCAD1 /* PlanServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanServiceTest.swift; sourceTree = "<group>"; };
 		5AE4BA3628F0BBE0009DF670 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5A9F76F828E89513006B6679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AE30BF528F9FDCE002BCAD1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -113,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				5A9F76FD28E89513006B6679 /* mealy */,
+				5AE30BF928F9FDCE002BCAD1 /* mealyTests */,
 				5A9F76FC28E89513006B6679 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				5A9F76FB28E89513006B6679 /* mealy.app */,
+				5AE30BF828F9FDCE002BCAD1 /* mealyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +182,14 @@
 			path = Buy;
 			sourceTree = "<group>";
 		};
+		5AE30BF928F9FDCE002BCAD1 /* mealyTests */ = {
+			isa = PBXGroup;
+			children = (
+				5AE30BFA28F9FDCE002BCAD1 /* PlanServiceTest.swift */,
+			);
+			path = mealyTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,6 +210,24 @@
 			productReference = 5A9F76FB28E89513006B6679 /* mealy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5AE30BF728F9FDCE002BCAD1 /* mealyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AE30BFE28F9FDCE002BCAD1 /* Build configuration list for PBXNativeTarget "mealyTests" */;
+			buildPhases = (
+				5AE30BF428F9FDCE002BCAD1 /* Sources */,
+				5AE30BF528F9FDCE002BCAD1 /* Frameworks */,
+				5AE30BF628F9FDCE002BCAD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AE30BFD28F9FDCE002BCAD1 /* PBXTargetDependency */,
+			);
+			name = mealyTests;
+			productName = mealyTests;
+			productReference = 5AE30BF828F9FDCE002BCAD1 /* mealyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -186,6 +240,10 @@
 				TargetAttributes = {
 					5A9F76FA28E89513006B6679 = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					5AE30BF728F9FDCE002BCAD1 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 5A9F76FA28E89513006B6679;
 					};
 				};
 			};
@@ -203,6 +261,7 @@
 			projectRoot = "";
 			targets = (
 				5A9F76FA28E89513006B6679 /* mealy */,
+				5AE30BF728F9FDCE002BCAD1 /* mealyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -214,6 +273,13 @@
 			files = (
 				5A9F770628E89514006B6679 /* Preview Assets.xcassets in Resources */,
 				5A9F770328E89514006B6679 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AE30BF628F9FDCE002BCAD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +308,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5AE30BF428F9FDCE002BCAD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AE30C0428F9FE93002BCAD1 /* Meal.swift in Sources */,
+				5AE30C0128F9FE70002BCAD1 /* PlanService.swift in Sources */,
+				5AE30C0628F9FE93002BCAD1 /* UnitType.swift in Sources */,
+				5AE30C0528F9FE93002BCAD1 /* Ingredient.swift in Sources */,
+				5AE30BFB28F9FDCE002BCAD1 /* PlanServiceTest.swift in Sources */,
+				5AE30C0228F9FE75002BCAD1 /* JsonStore.swift in Sources */,
+				5AE30C0328F9FE93002BCAD1 /* PlanItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AE30BFD28F9FDCE002BCAD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A9F76FA28E89513006B6679 /* mealy */;
+			targetProxy = 5AE30BFC28F9FDCE002BCAD1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5A9F770728E89514006B6679 /* Debug */ = {
@@ -430,6 +518,42 @@
 			};
 			name = Release;
 		};
+		5AE30BFF28F9FDCE002BCAD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V5CJ3339YJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.gaussian.mealyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mealy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mealy";
+			};
+			name = Debug;
+		};
+		5AE30C0028F9FDCE002BCAD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V5CJ3339YJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.gaussian.mealyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mealy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mealy";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -447,6 +571,15 @@
 			buildConfigurations = (
 				5A9F770A28E89514006B6679 /* Debug */,
 				5A9F770B28E89514006B6679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AE30BFE28F9FDCE002BCAD1 /* Build configuration list for PBXNativeTarget "mealyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AE30BFF28F9FDCE002BCAD1 /* Debug */,
+				5AE30C0028F9FDCE002BCAD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

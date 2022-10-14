@@ -45,7 +45,7 @@ struct MealEdit: View {
             }
         }
         .navigationTitle(creation ? "Erstellen" : self.name)
-        .onDisappear(perform: {mealService.addMeal(name: name, ingredients: ingredients, description: description)})
+        .onDisappear(perform: {mealService.add(name: name, ingredients: ingredients, description: description)})
     }
     
     private func removeIngredient(at offsets: IndexSet) {

@@ -34,6 +34,6 @@ struct BuyView : View {
     }
     
     private func getIngredient() -> [String] {
-        planService.getIngredients(plan: planService.plan, meals: mealService.meals)
+        planService.getIngredients(plan: planService.plan, meals: mealService.meals).map {$0.print()}
     }
 }

@@ -1,11 +1,9 @@
 import Foundation
 
-class PlanService: ObservableObject {
-    static let key = "plans"
-    
+public class PlanService: ObservableObject {
     @Published var plan = JsonStore.readPlan() {
         didSet {
-            JsonStore.persist(data: plan, key: PlanService.key)
+            JsonStore.savePlan(data: plan)
         }
     }
 
@@ -13,6 +11,7 @@ class PlanService: ObservableObject {
         if(meals.isEmpty) {
             return
         }
+        plan.removeAll()
         
         var newPlan: Set<Meal> = Set()
         while newPlan.count < min(days, meals.count) {
@@ -25,12 +24,8 @@ class PlanService: ObservableObject {
             plan.append(PlanItem(mealID: meal.id, day: day + 1))
         }
     }
-    
-    func clear() {
-        plan.removeAll()
-    }
 
-    func getIngredients(plan: [PlanItem], meals: [Meal]) -> [String]{
+    func getIngredients(plan: [PlanItem], meals: [Meal]) -> [Ingredient]{
        let planIgredients = plan
            .map {$0.mealID}
            .map { name in meals.first(where: { $0.id == name})}
@@ -44,7 +39,6 @@ class PlanService: ObservableObject {
             .compactMap{$0}
             .map{Ingredient(amount: sumIngredient(ingredients: $0) , unit: $0[0].unit, name: $0[0].name)}
             .sorted {$0.name < $1.name}
-            .map{$0.print()}
    }
 
    private func sumIngredient(ingredients: [Ingredient]) -> String {

@@ -30,7 +30,6 @@ struct PlanView: View {
     }
 
     private func generate() {
-        planService.clear()
         planService.regenerate(meals: mealService.meals, days: 4)
     }
 }
