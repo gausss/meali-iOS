@@ -36,5 +36,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0841FE4B-6506-40AC-9A71-C54C3A950BCD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mealy/Adapters/PlanService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "regenerate(meals:days:pinned:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0841FE4B-6506-40AC-9A71-C54C3A950BCD - 24319da082c6eab3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mealy.PlanService.regenerate(meals: Swift.Array&lt;mealy.Meal&gt;, days: Swift.Int, pinned: Swift.Dictionary&lt;Swift.Int, Swift.Bool&gt;) -&gt; ()"
+                  moduleName = "mealy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gausss/projects/mealy/mealy/Adapters/PlanService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "0841FE4B-6506-40AC-9A71-C54C3A950BCD - 9a9125ae1b794096"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mealyTests.PlanService.regenerate(meals: Swift.Array&lt;mealyTests.Meal&gt;, days: Swift.Int, pinned: Swift.Dictionary&lt;Swift.Int, Swift.Bool&gt;) -&gt; ()"
+                  moduleName = "mealyTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gausss/projects/mealy/mealy/Adapters/PlanService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

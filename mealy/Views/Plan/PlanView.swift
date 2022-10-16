@@ -3,6 +3,7 @@ import SwiftUI
 struct PlanView: View {
     @ObservedObject var mealService: MealService
     @ObservedObject var planService: PlanService
+    @State var pinned: [Int: Bool] = [:]
 
     var body: some View {
         NavigationView {
@@ -15,8 +16,8 @@ struct PlanView: View {
                 }
 
                 List {
-                    ForEach(planService.plan, id: \.day) { plan in
-                        PlanRow(day: plan.day, meal: mealService.getByName(name: plan.mealID))
+                    ForEach(planService.plan, id: \.day) { suggestion in
+                        PlanRow(day: suggestion.day, meal: mealService.getByName(name: suggestion.mealID), pinned: $pinned)
                     }
                 }.listStyle(.plain)
 
@@ -30,6 +31,6 @@ struct PlanView: View {
     }
 
     private func generate() {
-        planService.regenerate(meals: mealService.meals, days: 4)
+        planService.regenerate(meals: mealService.meals, pinned: pinned)
     }
 }

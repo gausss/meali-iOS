@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A1DC9BC28F1D30B00E24B68 /* PlanRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1DC9BB28F1D30B00E24B68 /* PlanRow.swift */; };
 		5A1DC9C028F1DE3C00E24B68 /* PlanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1DC9BF28F1DE3C00E24B68 /* PlanService.swift */; };
-		5A1DC9C228F1DE4600E24B68 /* PlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1DC9C128F1DE4600E24B68 /* PlanItem.swift */; };
+		5A1DC9C228F1DE4600E24B68 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1DC9C128F1DE4600E24B68 /* Suggestion.swift */; };
 		5A5616C528F5FA5400832CC1 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5616C428F5FA5400832CC1 /* UnitType.swift */; };
 		5A5616C728F5FE1A00832CC1 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5616C628F5FE1A00832CC1 /* Ingredient.swift */; };
 		5A567B6C28E89B8D00DB6A6F /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B6B28E89B8D00DB6A6F /* Meal.swift */; };
@@ -26,7 +26,7 @@
 		5AE30BFB28F9FDCE002BCAD1 /* PlanServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE30BFA28F9FDCE002BCAD1 /* PlanServiceTest.swift */; };
 		5AE30C0128F9FE70002BCAD1 /* PlanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1DC9BF28F1DE3C00E24B68 /* PlanService.swift */; };
 		5AE30C0228F9FE75002BCAD1 /* JsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE30BCB28F9EA8E002BCAD1 /* JsonStore.swift */; };
-		5AE30C0328F9FE93002BCAD1 /* PlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1DC9C128F1DE4600E24B68 /* PlanItem.swift */; };
+		5AE30C0328F9FE93002BCAD1 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1DC9C128F1DE4600E24B68 /* Suggestion.swift */; };
 		5AE30C0428F9FE93002BCAD1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567B6B28E89B8D00DB6A6F /* Meal.swift */; };
 		5AE30C0528F9FE93002BCAD1 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5616C628F5FE1A00832CC1 /* Ingredient.swift */; };
 		5AE30C0628F9FE93002BCAD1 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5616C428F5FA5400832CC1 /* UnitType.swift */; };
@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		5A1DC9BB28F1D30B00E24B68 /* PlanRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRow.swift; sourceTree = "<group>"; };
 		5A1DC9BF28F1DE3C00E24B68 /* PlanService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanService.swift; sourceTree = "<group>"; };
-		5A1DC9C128F1DE4600E24B68 /* PlanItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanItem.swift; sourceTree = "<group>"; };
+		5A1DC9C128F1DE4600E24B68 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 		5A5616C428F5FA5400832CC1 /* UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
 		5A5616C628F5FE1A00832CC1 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		5A567B6B28E89B8D00DB6A6F /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			children = (
 				5A5616C428F5FA5400832CC1 /* UnitType.swift */,
 				5A567B6B28E89B8D00DB6A6F /* Meal.swift */,
-				5A1DC9C128F1DE4600E24B68 /* PlanItem.swift */,
+				5A1DC9C128F1DE4600E24B68 /* Suggestion.swift */,
 				5A5616C628F5FE1A00832CC1 /* Ingredient.swift */,
 			);
 			path = Models;
@@ -294,7 +294,7 @@
 				5A567B6C28E89B8D00DB6A6F /* Meal.swift in Sources */,
 				5A567B8028E8C58100DB6A6F /* MealView.swift in Sources */,
 				5A5616C728F5FE1A00832CC1 /* Ingredient.swift in Sources */,
-				5A1DC9C228F1DE4600E24B68 /* PlanItem.swift in Sources */,
+				5A1DC9C228F1DE4600E24B68 /* Suggestion.swift in Sources */,
 				5A1DC9C028F1DE3C00E24B68 /* PlanService.swift in Sources */,
 				5A567B8228E8C83600DB6A6F /* MealEdit.swift in Sources */,
 				5A9F76FF28E89513006B6679 /* mealyApp.swift in Sources */,
@@ -318,7 +318,7 @@
 				5AE30C0528F9FE93002BCAD1 /* Ingredient.swift in Sources */,
 				5AE30BFB28F9FDCE002BCAD1 /* PlanServiceTest.swift in Sources */,
 				5AE30C0228F9FE75002BCAD1 /* JsonStore.swift in Sources */,
-				5AE30C0328F9FE93002BCAD1 /* PlanItem.swift in Sources */,
+				5AE30C0328F9FE93002BCAD1 /* Suggestion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

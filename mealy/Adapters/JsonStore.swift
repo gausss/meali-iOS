@@ -4,17 +4,17 @@ struct JsonStore {
     static let mealsKey = "meals"
     static let planKey = "plans"
 
-    static func readPlan() -> [PlanItem] {
+    static func readPlan() -> [Suggestion] {
         let savedPlan = UserDefaults.standard.object(forKey: planKey)
         if let savedPlan = savedPlan as? Data {
             let decoder = JSONDecoder()
-            return (try? decoder.decode([PlanItem].self, from: savedPlan))
+            return (try? decoder.decode([Suggestion].self, from: savedPlan))
                     ?? []
         }
         return []
     }
     
-    static func savePlan(data: [PlanItem]) {
+    static func savePlan(data: [Suggestion]) {
         persist(data: data, key: planKey)
     }
     

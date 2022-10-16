@@ -5,22 +5,31 @@ final class PlanServiceTest: XCTestCase {
     let testMeals = [Meal(id: "Lachs", ingredients: [Ingredient(amount: "1", unit: .x, name: "LachsFilet"),Ingredient(amount: "120", unit: .g, name: "Reis")], description: "Test"),
                      Meal(id: "Linsen & Spätzle", ingredients: [Ingredient(amount: "200", unit: .g, name: "Linsen"), Ingredient(amount: "300", unit: .g, name: "Spätzle")], description: "Test2"),
                      Meal(id: "Linsen Curry", ingredients: [Ingredient(amount: "350", unit: .g, name: "Linsen"), Ingredient(amount: "150", unit: .g, name: "Reis")], description: "Test3")]
-    let testPlan = [PlanItem(mealID: "Lachs", day: 0), PlanItem(mealID: "Linsen & Spätzle", day: 1), PlanItem(mealID: "Linsen Curry", day: 2)]
+    let testPlan = [Suggestion(mealID: "Lachs", day: 0), Suggestion(mealID: "Linsen & Spätzle", day: 1), Suggestion(mealID: "Linsen Curry", day: 2)]
     
-    func testPlanGeneration() throws {
+    func testPlanGenerationSingleNoPin() throws {
         let planService = PlanService()
         
         planService.regenerate(meals: testMeals, days: 1)
         XCTAssertTrue(planService.plan.count == 1)
+    }
+    
+    func testPlanGenerationMultiWithPin() throws {
+        let planService = PlanService()
+        planService.plan = testPlan
         
-        planService.regenerate(meals: testMeals, days: 3)
+        planService.regenerate(meals: testMeals, days: 3, pinned: [1: true])
         XCTAssertTrue(planService.plan.count == 3)
+        XCTAssertTrue(planService.plan[1].mealID == "Linsen & Spätzle")
         XCTAssertTrue(Set(planService.plan.map {$0.mealID}).count == 3)
+    }
+    
+    func testPlanGenerationMultiNoPin() throws {
+        let planService = PlanService()
 
-        
         planService.regenerate(meals: testMeals, days: 4)
-        XCTAssertTrue(planService.plan.count == 3)
-        XCTAssertTrue(Set(planService.plan.map {$0.mealID}).count == 3)
+        XCTAssertTrue(planService.plan.count == 4)
+        XCTAssertTrue(Set(planService.plan.map {$0.mealID}).count == 4)
     }
     
     func testIngredientList() throws {
