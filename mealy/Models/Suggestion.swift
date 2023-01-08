@@ -1,6 +1,6 @@
 import Foundation
 
 struct Suggestion: Codable {
-    let mealID: String
+    let mealID: Int
     let day: Int
 }

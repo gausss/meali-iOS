@@ -20,7 +20,7 @@ struct MealView: View {
                         NavigationLink {
                             MealEdit(mealService: mealService, meal: meal)
                         } label: {
-                            Text(meal.id)
+                            Text(meal.name)
                         }
                     }.onDelete(perform: mealService.delete)
                 }.listStyle(.plain)
@@ -41,6 +41,6 @@ struct MealView: View {
             return mealService.meals
         }
         
-        return mealService.meals.filter{$0.id.contains(query)}
+        return mealService.meals.filter{$0.name.contains(query)}
     }
 }

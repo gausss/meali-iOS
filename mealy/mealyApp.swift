@@ -5,7 +5,7 @@ struct mealyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().onAppear(perform: MigrationService().migrate)
         }
     }
 }

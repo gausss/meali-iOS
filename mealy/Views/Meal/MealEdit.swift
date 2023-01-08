@@ -6,28 +6,26 @@ struct MealEdit: View {
     @State private var name = ""
     @State private var ingredients: [Ingredient] = []
     @State private var description = ""
-    let creation: Bool
+    private let ID: Int
     
     init(mealService: MealService, meal: Meal) {
         self.mealService = mealService
-        self.name = meal.id
+        self.name = meal.name
         self.ingredients = meal.ingredients
         self.description = meal.description
-        self.creation = false
+        self.ID = meal.id
     }
     
     init(mealService: MealService) {
         self.mealService = mealService
-        self.creation = true
+        self.ID = 0
     }
     
     var body: some View {
         VStack(alignment: .leading) {
             Form {
-                if (creation) {
-                    Section(header: Text("Name")) {
-                        TextField("", text: $name)
-                    }
+                Section(header: Text("Name")) {
+                    TextField("", text: $name)
                 }
                 Section(header: Text("Zutaten")) {
                     List {
@@ -44,8 +42,8 @@ struct MealEdit: View {
                 }
             }
         }
-        .navigationTitle(creation ? "Erstellen" : self.name)
-        .onDisappear(perform: {mealService.add(name: name, ingredients: ingredients, description: description)})
+        .navigationTitle(ID == 0 ? "Erstellen" : self.name)
+        .onDisappear(perform: {mealService.save(ID: ID != 0 ? ID : mealService.generateID(), name: name, ingredients: ingredients, description: description)})
     }
     
     private func removeIngredient(at offsets: IndexSet) {

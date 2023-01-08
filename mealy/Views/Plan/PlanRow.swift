@@ -10,7 +10,7 @@ struct PlanRow: View {
             HStack {
                 Text("\(day + 1)").font(.largeTitle).foregroundColor(Color.gray).bold().padding(12)
                 
-                Text(meal.id).font(.title2).bold()
+                Text(meal.name).font(.title2).bold()
                 
                 Spacer()
                 

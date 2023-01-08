@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0841FE4B-6506-40AC-9A71-C54C3A950BCD"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mealy/Adapters/PlanService.swift"
@@ -50,38 +50,70 @@
             endingLineNumber = "11"
             landmarkName = "regenerate(meals:days:pinned:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0841FE4B-6506-40AC-9A71-C54C3A950BCD - 24319da082c6eab3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "mealy.PlanService.regenerate(meals: Swift.Array&lt;mealy.Meal&gt;, days: Swift.Int, pinned: Swift.Dictionary&lt;Swift.Int, Swift.Bool&gt;) -&gt; ()"
-                  moduleName = "mealy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gausss/projects/mealy/mealy/Adapters/PlanService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "204">
-               </Location>
-               <Location
-                  uuid = "0841FE4B-6506-40AC-9A71-C54C3A950BCD - 9a9125ae1b794096"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "mealyTests.PlanService.regenerate(meals: Swift.Array&lt;mealyTests.Meal&gt;, days: Swift.Int, pinned: Swift.Dictionary&lt;Swift.Int, Swift.Bool&gt;) -&gt; ()"
-                  moduleName = "mealyTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gausss/projects/mealy/mealy/Adapters/PlanService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "204">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B9E4C56-92CD-4BF4-BEC5-CF5E032DBF0D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mealy/Adapters/MealService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "generateID()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5B0711D-8F21-4ADD-940F-A21CFC4F3A64"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mealy/Adapters/JsonStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "readID()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B516A14D-6733-4624-A778-BF9EF3A6D296"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mealy/Adapters/JsonStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "readID()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41AA616B-7C90-4ACC-91A8-5C01A59C1A22"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mealy/Views/Plan/PlanView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "generate()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

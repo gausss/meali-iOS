@@ -17,7 +17,7 @@ struct PlanView: View {
 
                 List {
                     ForEach(planService.plan, id: \.day) { suggestion in
-                        PlanRow(day: suggestion.day, meal: mealService.getByName(name: suggestion.mealID), pinned: $pinned)
+                        PlanRow(day: suggestion.day, meal: mealService.getByID(ID: suggestion.mealID), pinned: $pinned)
                     }
                 }.listStyle(.plain)
 
