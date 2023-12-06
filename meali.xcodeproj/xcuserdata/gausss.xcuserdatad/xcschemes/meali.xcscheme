@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5A9F76FA28E89513006B6679"
-               BuildableName = "mealy.app"
-               BlueprintName = "mealy"
-               ReferencedContainer = "container:mealy.xcodeproj">
+               BuildableName = "meali.app"
+               BlueprintName = "meali"
+               ReferencedContainer = "container:meali.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5AE30BD828F9FC1F002BCAD1"
-               BuildableName = "mealyTests.xctest"
-               BlueprintName = "mealyTests"
-               ReferencedContainer = "container:mealy.xcodeproj">
+               BlueprintIdentifier = "5AE30BF728F9FDCE002BCAD1"
+               BuildableName = "mealiTests.xctest"
+               BlueprintName = "mealiTests"
+               ReferencedContainer = "container:meali.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5A9F76FA28E89513006B6679"
-            BuildableName = "mealy.app"
-            BlueprintName = "mealy"
-            ReferencedContainer = "container:mealy.xcodeproj">
+            BuildableName = "meali.app"
+            BlueprintName = "meali"
+            ReferencedContainer = "container:meali.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5A9F76FA28E89513006B6679"
-            BuildableName = "mealy.app"
-            BlueprintName = "mealy"
-            ReferencedContainer = "container:mealy.xcodeproj">
+            BuildableName = "meali.app"
+            BlueprintName = "meali"
+            ReferencedContainer = "container:meali.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

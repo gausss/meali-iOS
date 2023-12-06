@@ -2,10 +2,10 @@ import XCTest
 
 final class PlanServiceTest: XCTestCase {
 
-    let testMeals = [Meal(id: "Lachs", ingredients: [Ingredient(amount: "1", unit: .x, name: "LachsFilet"),Ingredient(amount: "120", unit: .g, name: "Reis")], description: "Test"),
-                     Meal(id: "Linsen & Spätzle", ingredients: [Ingredient(amount: "200", unit: .g, name: "Linsen"), Ingredient(amount: "300", unit: .g, name: "Spätzle")], description: "Test2"),
-                     Meal(id: "Linsen Curry", ingredients: [Ingredient(amount: "350", unit: .g, name: "Linsen"), Ingredient(amount: "150", unit: .g, name: "Reis")], description: "Test3")]
-    let testPlan = [Suggestion(mealID: "Lachs", day: 0), Suggestion(mealID: "Linsen & Spätzle", day: 1), Suggestion(mealID: "Linsen Curry", day: 2)]
+    let testMeals = [Meal(id: 1, name: "Lachs", ingredients: [Ingredient(amount: "1", unit: .x, name: "LachsFilet"),Ingredient(amount: "120", unit: .g, name: "Reis")], description: "Test"),
+                     Meal(id: 2, name: "Linsen & Spätzle", ingredients: [Ingredient(amount: "200", unit: .g, name: "Linsen"), Ingredient(amount: "300", unit: .g, name: "Spätzle")], description: "Test2"),
+                     Meal(id: 3, name: "Linsen Curry", ingredients: [Ingredient(amount: "350", unit: .g, name: "Linsen"), Ingredient(amount: "150", unit: .g, name: "Reis")], description: "Test3")]
+    let testPlan = [Suggestion(mealID: 1, day: 0), Suggestion(mealID: 2, day: 1), Suggestion(mealID: 3, day: 2)]
     
     func testPlanGenerationSingleNoPin() throws {
         let planService = PlanService()
@@ -20,7 +20,7 @@ final class PlanServiceTest: XCTestCase {
         
         planService.regenerate(meals: testMeals, days: 3, pinned: [1: true])
         XCTAssertTrue(planService.plan.count == 3)
-        XCTAssertTrue(planService.plan[1].mealID == "Linsen & Spätzle")
+        XCTAssertTrue(planService.plan[1].mealID == 2)
         XCTAssertTrue(Set(planService.plan.map {$0.mealID}).count == 3)
     }
     

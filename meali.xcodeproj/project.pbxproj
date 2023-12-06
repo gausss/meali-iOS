@@ -55,7 +55,7 @@
 		5A567B7B28E8BEE400DB6A6F /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
 		5A567B7F28E8C58100DB6A6F /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 		5A567B8128E8C83600DB6A6F /* MealEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealEdit.swift; sourceTree = "<group>"; };
-		5A9F76FB28E89513006B6679 /* mealy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A9F76FB28E89513006B6679 /* meali.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meali.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9F76FE28E89513006B6679 /* mealyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealyApp.swift; sourceTree = "<group>"; };
 		5A9F770028E89513006B6679 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5A9F770228E89514006B6679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		5ADF46E028F864BC00D045D5 /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
 		5AE30BC928F9E588002BCAD1 /* IngredientEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientEdit.swift; sourceTree = "<group>"; };
 		5AE30BCB28F9EA8E002BCAD1 /* JsonStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStore.swift; sourceTree = "<group>"; };
-		5AE30BF828F9FDCE002BCAD1 /* mealyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mealyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE30BF828F9FDCE002BCAD1 /* mealiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mealiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE30BFA28F9FDCE002BCAD1 /* PlanServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanServiceTest.swift; sourceTree = "<group>"; };
 		5AE3FA8D296AFA1C000B5CBD /* MigrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationService.swift; sourceTree = "<group>"; };
 		5AE3FA91296B014B000B5CBD /* Migration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migration.swift; sourceTree = "<group>"; };
@@ -144,8 +144,8 @@
 		5A9F76F228E89513006B6679 = {
 			isa = PBXGroup;
 			children = (
-				5A9F76FD28E89513006B6679 /* mealy */,
-				5AE30BF928F9FDCE002BCAD1 /* mealyTests */,
+				5A9F76FD28E89513006B6679 /* meali */,
+				5AE30BF928F9FDCE002BCAD1 /* meali_tests */,
 				5A9F76FC28E89513006B6679 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,13 +153,13 @@
 		5A9F76FC28E89513006B6679 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A9F76FB28E89513006B6679 /* mealy.app */,
-				5AE30BF828F9FDCE002BCAD1 /* mealyTests.xctest */,
+				5A9F76FB28E89513006B6679 /* meali.app */,
+				5AE30BF828F9FDCE002BCAD1 /* mealiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5A9F76FD28E89513006B6679 /* mealy */ = {
+		5A9F76FD28E89513006B6679 /* meali */ = {
 			isa = PBXGroup;
 			children = (
 				5A567B7A28E8BED400DB6A6F /* Adapters */,
@@ -169,7 +169,7 @@
 				5A9F770228E89514006B6679 /* Assets.xcassets */,
 				5A9F770428E89514006B6679 /* Preview Content */,
 			);
-			path = mealy;
+			path = meali;
 			sourceTree = "<group>";
 		};
 		5A9F770428E89514006B6679 /* Preview Content */ = {
@@ -188,20 +188,20 @@
 			path = Buy;
 			sourceTree = "<group>";
 		};
-		5AE30BF928F9FDCE002BCAD1 /* mealyTests */ = {
+		5AE30BF928F9FDCE002BCAD1 /* meali_tests */ = {
 			isa = PBXGroup;
 			children = (
 				5AE30BFA28F9FDCE002BCAD1 /* PlanServiceTest.swift */,
 			);
-			path = mealyTests;
+			path = meali_tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5A9F76FA28E89513006B6679 /* mealy */ = {
+		5A9F76FA28E89513006B6679 /* meali */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A9F770928E89514006B6679 /* Build configuration list for PBXNativeTarget "mealy" */;
+			buildConfigurationList = 5A9F770928E89514006B6679 /* Build configuration list for PBXNativeTarget "meali" */;
 			buildPhases = (
 				5A9F76F728E89513006B6679 /* Sources */,
 				5A9F76F828E89513006B6679 /* Frameworks */,
@@ -211,14 +211,14 @@
 			);
 			dependencies = (
 			);
-			name = mealy;
+			name = meali;
 			productName = mealy;
-			productReference = 5A9F76FB28E89513006B6679 /* mealy.app */;
+			productReference = 5A9F76FB28E89513006B6679 /* meali.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5AE30BF728F9FDCE002BCAD1 /* mealyTests */ = {
+		5AE30BF728F9FDCE002BCAD1 /* mealiTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5AE30BFE28F9FDCE002BCAD1 /* Build configuration list for PBXNativeTarget "mealyTests" */;
+			buildConfigurationList = 5AE30BFE28F9FDCE002BCAD1 /* Build configuration list for PBXNativeTarget "mealiTests" */;
 			buildPhases = (
 				5AE30BF428F9FDCE002BCAD1 /* Sources */,
 				5AE30BF528F9FDCE002BCAD1 /* Frameworks */,
@@ -229,9 +229,9 @@
 			dependencies = (
 				5AE30BFD28F9FDCE002BCAD1 /* PBXTargetDependency */,
 			);
-			name = mealyTests;
+			name = mealiTests;
 			productName = mealyTests;
-			productReference = 5AE30BF828F9FDCE002BCAD1 /* mealyTests.xctest */;
+			productReference = 5AE30BF828F9FDCE002BCAD1 /* mealiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -253,7 +253,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5A9F76F628E89513006B6679 /* Build configuration list for PBXProject "mealy" */;
+			buildConfigurationList = 5A9F76F628E89513006B6679 /* Build configuration list for PBXProject "meali" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -266,8 +266,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5A9F76FA28E89513006B6679 /* mealy */,
-				5AE30BF728F9FDCE002BCAD1 /* mealyTests */,
+				5A9F76FA28E89513006B6679 /* meali */,
+				5AE30BF728F9FDCE002BCAD1 /* mealiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -335,7 +335,7 @@
 /* Begin PBXTargetDependency section */
 		5AE30BFD28F9FDCE002BCAD1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5A9F76FA28E89513006B6679 /* mealy */;
+			target = 5A9F76FA28E89513006B6679 /* meali */;
 			targetProxy = 5AE30BFC28F9FDCE002BCAD1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -463,7 +463,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"mealy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"meali/Preview Content\"";
 				DEVELOPMENT_TEAM = V5CJ3339YJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -498,7 +498,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"mealy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"meali/Preview Content\"";
 				DEVELOPMENT_TEAM = V5CJ3339YJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -540,7 +540,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mealy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mealy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/meali.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/meali";
 			};
 			name = Debug;
 		};
@@ -558,14 +558,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mealy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mealy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/meali.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/meali";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A9F76F628E89513006B6679 /* Build configuration list for PBXProject "mealy" */ = {
+		5A9F76F628E89513006B6679 /* Build configuration list for PBXProject "meali" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A9F770728E89514006B6679 /* Debug */,
@@ -574,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A9F770928E89514006B6679 /* Build configuration list for PBXNativeTarget "mealy" */ = {
+		5A9F770928E89514006B6679 /* Build configuration list for PBXNativeTarget "meali" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A9F770A28E89514006B6679 /* Debug */,
@@ -583,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5AE30BFE28F9FDCE002BCAD1 /* Build configuration list for PBXNativeTarget "mealyTests" */ = {
+		5AE30BFE28F9FDCE002BCAD1 /* Build configuration list for PBXNativeTarget "mealiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5AE30BFF28F9FDCE002BCAD1 /* Debug */,
